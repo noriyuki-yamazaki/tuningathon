@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}score summary{% endblock %}
+
+{% block content %}
+
+<table cellspacing="1" bgcolor="#770000">
+{% for x in ranking %}
+  <tr>
+    <td bgcolor="#88ffff">
+      {{ forloop.counter }}
+    </td>
+    <td bgcolor="#88ffff">
+      {{ x.ip }}
+    </td>
+    <td bgcolor="#88ffff">
+      {{ x.score }}
+    </td>
+  </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
